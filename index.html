@@ -1,225 +1,47 @@
-<!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
+<!doctype html>
+<html>
 
 <head>
-
-    <!--- Basic Page Needs
-   ================================================== -->
-    <meta charset="utf-8">
-    <title>Nott's Dev Workshops</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Mobile Specific Metas
-   ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <!-- Script
-   ================================================== -->
-    <script src="js/modernizr.js"></script>
-
-    <!-- Favicons
-  ================================================== -->
-    <link rel="shortcut icon" href="favicon.png">
-
-    <!-- Fb tags
-    ================================================ -->
-    <meta property="og:title" content="Nott's Dev Workshops'" />
-    <meta property="og:description" content="'" />
-    <meta property="og:url" content="http://nottsdevworkshop.co.uk" />
-    <meta property="og:image" content="http://nottsdevworkshop.co.uk/images/logo.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Nott's Dev Wroskop</title>
+	<link rel="stylesheet" href="css/styles.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 </head>
 
 <body>
+	<div id="main-container">
+		<img src="img/logo.png" />
+	</div>
+	<div class="current">
+		<h1>Current workshop</h1>
+		<div class="card">
+			<div class="row">
+				<div class="card-image col-lg-3 col-md-3">
+					<img src="img/Speakers/RobSewell.jpg" />
+				</div>
+				<div class="card-title col-lg-6 col-md-6">
+					<h2>An Introduction to PowerShell </h2>
+					<h3>by Rob Sewell</h3>
+					<div class="card-sm">
+						<a href="#"><img src="img/SocialMedia/Facebook.png" /></a>
+						<a href="#"><img src="img/SocialMedia/Twitter.png" /></a>
+					</div>
+					<div class="card-readmore col-lg-12 col-md-12">
+						Read more..
+					</div>
+				</div>
+				<div class="card-app col-lg-3 col-md-3">
 
-    <!-- Header
-   ================================================== -->
-    <header id="home">
-        <nav id="nav-wrap">
-            <a class="mobile-btn" href="#nav-wrap" title="Show menu">Show navigation</a>
-            <a class="mobile-btn" href="#" title="Hide menu">Hide navigation</a>
+					<div class="app-calendar">
 
-            <ul id="nav" class="nav">
-                <li class="current">
-                    <a class="smoothscroll" href="#home">Nott's Dev Workshops</a>
-                </li>
-                <li>
-                    <a class="smoothscroll" href="#current">Current Workshop</a>
-                </li>
-                <!--<li>
-                    <a class="smoothscroll" href="#past">Past Workshop</a>
-                </li>-->
-                <li>
-                    <a class="smoothscroll" href="#sponsors">Sponsors</a>
-                </li>
-                <li>
-                    <a class="smoothscroll" href="#call">Want to be a speaker?</a>
-                </li>
-                <li>
-                    <a class="smoothscroll" href="#about">About us</a>
-                </li>
-                <li>
-                    <a class="smoothscroll" href="#contact">Contact</a>
-                </li>
-            </ul>
-            <!-- end #nav -->
-
-        </nav>
-        <!-- end #nav-wrap -->
-
-        <div class="row banner">
-            <div class="banner-text">
-                <h1 class="responsive-headline">
-                    <!--<img alt="" src="images/logo.png">-->
-                    <a href="">#NottsDevWorkshop</a></h1>
-                <h3>Welcome on <span>Nott's Dev Workshops</span></h3>
-                <ul class="social">
-                    <li><a href="http://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <!-- Header End -->
-
-
-    <!-- Current Workshop Section
-   ================================================== -->
-    <section id="current">
-        <div class="row">
-            <div class="twelve columns main-col">
-                <h2>Next workshop:</h2>
-                <h3>Title: </h3>
-                <h3>Author: </h3>
-                <h3>When: </h3>
-            </div>
-            <!-- end .main-col -->
-        </div>
-    </section>
-    <!-- Current Workshop Section End-->
-
-    <!-- Past Workshop Section
-   ================================================== -->
-    <!--<section id="past">
-        <div class="row description">
-            <div class="four columns header-col">
-            </div>
-            <div class="eight columns header-col">
-              
-              </div>
-        </div>
-    </section>-->
-    <!-- Groups Section End-->
-    <section id="sponsors">
-        <div class="row">
-            <div class="twelve columns collapsed">
-                <h1>Sponsors for current workshop:</h1>
-                <!-- sponsors-wrapper -->
-                <div id="sponsors-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-                    <!-- item end -->
-                </div>
-                <!-- sponsors-wrapper end -->
-            </div>
-            <!-- twelve columns end -->
-        </div>
-        <!--<div class="row">
-            <div class="twelve columns collapsed">
-                <h1>Sponsors for past workshops:</h1>
-            </div>
-        </div>-->
-        <!-- row End -->
-    </section>
-    <!-- Sponsors Section End-->
-<!-- Call For Paper Section
-   ================================================== -->
-    <section id="call">
-        <div class="row">
-            <div class="twelve columns collapsed">
-                <h1>Do you want to be a speaker on our workshop?</h1>
-                <!-- call-wrapper -->
-                <div id="call-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-                </div>
-                <!-- call-wrapper end -->
-            </div>
-            <!-- twelve columns end -->
-        </div>
-        <!-- row End -->
-    </section>
-    <!-- Call For Paper Section End-->
-
-    <!-- About us -->
-    <section id="about">
-        <div class="row">
-        </div>
-    </section>
-    <!-- Contact Section
-   ================================================== -->
-    <section id="contact">
-        <div class="row section-head">
-            <div class="two columns header-col">
-                <h1><span>Contact us</span></h1>
-            </div>
-
-            <div class="ten columns">
-                <p class="lead">
-
-                </p>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Section End-->
-
-
-    <!-- footer
-   ================================================== -->
-    <footer>
-        <div class="row">
-            <div class="twelve columns">
-                <ul class="social-links">
-                    <li><a href="http://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                    </li>
-                </ul>
-                <ul class="copyright">
-                    <li>&copy; Copyright 2016 Nott's Dev Workshops</li>
-                    <li>Desing based on <a title="Styleshout" href="http://www.styleshout.com/free-templates/ceevee/">Styleshout Ceevee</a> template.</li>
-                </ul>
-            </div>
-            <div id="go-top"><a class="smoothscroll" title="Go back" href="#home"><i class="icon-up-open"></i></a>
-            </div>
-        </div>
-
-    </footer>
-    <!-- Footer End-->
-
-    <!-- Java Script
-   ================================================== -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')
-    </script>
-    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-
-    <script src="js/jquery.flexslider.js"></script>
-    <script src="js/waypoints.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/magnific-popup.js"></script>
-    <script src="js/init.js"></script>
-
+						<div id="month">February</div>
+						<div id="day">28</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="jquery.js"></script>
+		<script src="custom.js"></script>
 </body>
 
 </html>
