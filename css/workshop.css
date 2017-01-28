@@ -11,8 +11,13 @@ h1 {
 	text-align: center;
 }
 
+#logo {
+		text-align: center;
+		margin-bottom: 50px;
+}
+
 #logo img{
-    margin-left: 15px; 
+    /*margin-left: 15px; */
     width: 200px;
 }
 
@@ -26,10 +31,34 @@ h1 {
  margin: 0 15%; 
 }
 
+.container-workshop .panel {
+	text-align: center;
+}
+
 .container-workshop .panel i {
 	font-size: 50px;
+	padding: 10px 0 ;
+}
+
+.container-workshop .panel p {
+	/*display: inline-flex;*/
+	font-size: 20px;
+}
+
+.container-workshop .panel span {
+	font-size: 15px;
+	padding: none;
+	margin: none;
 }
 
 .container-speaker {
 		background-image:  linear-gradient(0deg, rgba(51, 255, 153, 0.5), rgba(51, 255, 153, 0.2));
+}
+
+.container-workshop-description {
+	background-image:  linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+}
+
+.description p {
+	font-size: 20px;
 }
