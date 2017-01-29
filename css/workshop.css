@@ -24,7 +24,7 @@ h1 {
 .conatiner {
 	margin-top: 50px;
 	border: seagreen solid 2px;
-    background-image:  linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+    background-image:  linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9));
 }
 
 .container-workshop{
@@ -41,7 +41,6 @@ h1 {
 }
 
 .container-workshop .panel p {
-	/*display: inline-flex;*/
 	font-size: 20px;
 }
 
@@ -53,12 +52,38 @@ h1 {
 
 .container-speaker {
 		background-image:  linear-gradient(0deg, rgba(51, 255, 153, 0.5), rgba(51, 255, 153, 0.2));
+		padding:  10px;
 }
 
-.container-workshop-description {
-	background-image:  linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+.container-speaker .speaker-bio {
+	font-size: 17px;
 }
 
-.description p {
-	font-size: 20px;
+.container-workshop-details  {
+	font-size: 17px;
+}
+.container-workshop-details a {
+	color: green;
+}
+
+.container-workshop-details .beforeWorkshop h4 {
+	font-size: 22px;
+	font-style: oblique;
+}
+
+.container-sponsors img {
+	width: 300px;
+}
+
+.container-sponsors .sm {
+	display: inline;
+	width: 60px;
+}
+
+.container-sponsors .center {
+	text-align: center;
+}
+
+.container-sponsors .sponsorBox{
+	border-right: 1px red solid;
 }
