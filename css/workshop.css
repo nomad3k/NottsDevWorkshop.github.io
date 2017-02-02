@@ -55,6 +55,11 @@ h1 {
 		padding:  10px;
 }
 
+.container-speaker .speaker-sm img{
+	width: 50px;
+	display: inline;
+}
+
 .container-speaker .speaker-bio {
 	font-size: 17px;
 }
