@@ -39,9 +39,9 @@ Rob is a SQL Server DBA with a passion for Powershell, Azure, Automation, and SQ
 He relishes sharing and learning and can be found doing both via Twitter and his blog. He spends most of his time looking at a screen and loves to solve problems. He knows that looking at a screen so much is bad for him because his wife tells him so. Thus, you can find him on the cricket field in the summer and flying a drone in the winter. He has a fabulous beard.
         `,
         links: {
+          web: 'https://sqldbawithabeard.com',
           facebook: 'sqldbawithabeard',
-          twitter: 'sqldbawithbeard',
-          web: 'https://sqldbawithabeard.com'
+          twitter: 'sqldbawithbeard'
         }
       }
     ]

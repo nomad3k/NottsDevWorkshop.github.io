@@ -22,9 +22,11 @@ class Homepage extends React.Component {
         </div>
         <div className='sponsors'>
           <h3 className='sponsors__title'>Sponsors</h3>
-          {sponsors.map((s,ix) => (
-            <SponsorPanel key={ix} sponsor={s} />
-          ))}
+          <div className='sponsors__items'>
+            {sponsors.map((s,ix) => (
+              <SponsorPanel key={ix} sponsor={s} />
+            ))}
+          </div>
         </div>
       </div>
     );

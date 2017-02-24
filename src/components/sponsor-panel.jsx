@@ -12,7 +12,7 @@ class SponsorPanel extends React.Component {
           {sponsor.name}
         </h3>
         <div className='sponsor__logo'>
-          <img src={sponsor.logo} />
+          <img src={sponsor.logo} className='sponsor__logo-img' />
         </div>
         <div className='sponsor__links'>
           {Object.getOwnPropertyNames(sponsor.links).map((p,ix) => (
