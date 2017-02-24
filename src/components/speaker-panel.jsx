@@ -1,8 +1,8 @@
 import React from 'react';
+import Markdown from 'react-markdown';
 
 import { links } from '../data';
 import LinkPanel from './link-panel';
-import Markdown from './markdown';
 
 class SpeakerPanel extends React.Component {
   render() {
@@ -20,7 +20,7 @@ class SpeakerPanel extends React.Component {
         </div>
         {hideBio ? (null) : (
           <div className='speaker__bio'>
-            <Markdown value={speaker.bio} />
+            <Markdown source={speaker.bio} />
           </div>
         )}
         <div className='speaker__links'>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Markdown from 'react-markdown';
+
 import SpeakerPanel from './speaker-panel';
-import Markdown from './markdown';
 
 class EventPanel extends React.Component {
   render() {
@@ -17,7 +18,7 @@ class EventPanel extends React.Component {
           <h3>{event.date}</h3>
         </div>
         <div className='event__description'>
-          <Markdown value={event.summary} />
+          <Markdown source={event.summary} />
         </div>
         <div className='event__speakers'>
           {event.speakers.map((s,ix) => (

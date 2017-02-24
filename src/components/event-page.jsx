@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Markdown from 'react-markdown';
 
 import { events, locations } from '../data';
 import SpeakerPanel from './speaker-panel';
 import LocationPanel from './location-panel';
-import Markdown from './markdown';
 
 class Homepage extends React.Component {
   render() {
@@ -36,11 +36,11 @@ class Homepage extends React.Component {
           </div>
         </div>
         <h3>Summary</h3>
-        <Markdown value={event.summary} />
+        <Markdown source={event.summary} />
         <h3>Description</h3>
-        <Markdown value={event.description} />
+        <Markdown source={event.description} />
         <h3>What you will need</h3>
-        <Markdown value={event.what_you_will_need} />
+        <Markdown source={event.what_you_will_need} />
         <h3>Speakers</h3>
         {event.speakers.map((s,ix) => (
           <SpeakerPanel key={ix} speaker={s} />
