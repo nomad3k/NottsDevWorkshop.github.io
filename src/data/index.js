@@ -31,7 +31,7 @@ At the end of the workshop attendees can expect to feel comfortable with using P
     speakers: [
       {
         name: 'Rob Sewell',
-        avatar: 'https://nottsdevworkshop.github.io/img/Speakers/RobSewell.jpg',
+        avatar: '/images/speakers/rob-sewell.jpg',
         quote: 'To be or not to be',
         bio: `
 Rob is a SQL Server DBA with a passion for Powershell, Azure, Automation, and SQL (PaaS geddit?). He is an officer for the PASS PowerShell Virtual Chapter and has spoken at and volunteered at many events. He is a member of the committee that organises SQL Saturday Exeter and also European PowerShell Conference. He is a proud supporter of the SQL and Powershell communities.
@@ -53,7 +53,7 @@ const sponsors = [
     name: 'Accelerate Places',
     logo: '/images/sponsors/accelerate-places.png',
     links: {
-      web: 'http://rebelrecruitment.co.uk/',
+      web: 'http://accelerateplaces.com/',
       facebook: 'acceleratenttm',
       twitter: 'AccelerateNttm',
       instagram: 'accelerateplaces',
