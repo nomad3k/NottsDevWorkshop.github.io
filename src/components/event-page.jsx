@@ -15,8 +15,8 @@ class Homepage extends React.Component {
       <div>
         <h2>Event Page</h2>
         <Link to='/'>Events</Link>
-        <h3>Details</h3>
         <div className='event__details'>
+          <h3>Details</h3>
           <div className='event__details-date'>
             <i className='fa fa-map-marker'></i>
             {location.name}
@@ -35,16 +35,24 @@ class Homepage extends React.Component {
             {event.time}
           </div>
         </div>
-        <h3>Summary</h3>
-        <Markdown source={event.summary} />
-        <h3>Description</h3>
-        <Markdown source={event.description} />
-        <h3>What you will need</h3>
-        <Markdown source={event.what_you_will_need} />
-        <h3>Speakers</h3>
-        {event.speakers.map((s,ix) => (
-          <SpeakerPanel key={ix} speaker={s} />
-        ))}
+        <div className='event__summary'>
+          <h3>Summary</h3>
+          <Markdown source={event.summary} />
+        </div>
+        <div className='event__description'>
+          <h3>Description</h3>
+          <Markdown source={event.description} />
+        </div>
+        <div className='event_what-you-will-need'>
+          <h3>What you will need</h3>
+          <Markdown source={event.what_you_will_need} />
+        </div>
+        <div className='event__speakers'>
+          <h3>Speakers</h3>
+          {event.speakers.map((s,ix) => (
+            <SpeakerPanel key={ix} speaker={s} />
+          ))}
+        </div>
         <div className='event__location'>
           <LocationPanel location={location} />
         </div>
