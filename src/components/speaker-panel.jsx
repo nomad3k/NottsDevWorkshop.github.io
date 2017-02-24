@@ -13,7 +13,7 @@ class SpeakerPanel extends React.Component {
           {speaker.name}
         </div>
         <div className='speaker__avatar'>
-          <img src={speaker.avatar} />
+          <img src={speaker.avatar} className='speaker__avatar-img' />
         </div>
         <div className='speaker__quote'>
           {speaker.quote}

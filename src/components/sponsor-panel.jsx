@@ -8,8 +8,12 @@ class SponsorPanel extends React.Component {
     const { sponsor } = this.props;
     return (
       <div className='sponsor'>
-        <h3>{sponsor.name}</h3>
-        <img src={sponsor.logo} />
+        <h3 className='sponsor__name'>
+          {sponsor.name}
+        </h3>
+        <div className='sponsor__logo'>
+          <img src={sponsor.logo} />
+        </div>
         <div className='sponsor__links'>
           {Object.getOwnPropertyNames(sponsor.links).map((p,ix) => (
             <LinkPanel key={ix} link={links[p]} value={sponsor.links[p]} />

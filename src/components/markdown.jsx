@@ -4,10 +4,10 @@ class Markdown extends React.Component {
   render() {
     const { value } = this.props;
     return (
-      <div>
-      {value.split('\n').map((p,ix) => (
-        <p key={ix}>{p}</p>
-      ))}
+      <div className='markdown'>
+        {value.split('\n').map((p,ix) => (
+          <p key={ix}>{p}</p>
+        ))}
       </div>
     );
   }
