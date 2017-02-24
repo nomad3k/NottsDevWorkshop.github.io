@@ -1,5 +1,20 @@
+.logo__img {
+  height: 256px;
+  width: auto;
+}
+
 .speaker__avatar-img {
   width: 128px;
   height: 128px;
   border-radius: 50%;
+}
+
+.sponsor__logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.link {
+  padding: 4px;
+  font-size: 32px;
 }
