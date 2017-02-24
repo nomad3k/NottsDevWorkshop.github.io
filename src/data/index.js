@@ -1,6 +1,7 @@
 const events = [
   {
     date: '2017-03-03',
+    time: '5:30pm',
     title: 'An Introduction to PowerShell',
     link: 'an_introduction_to_powershell',
     location: 'accelerate_places_nottingham',
@@ -73,7 +74,15 @@ const sponsors = [
 ];
 
 const locations = {
-
+  accelerate_places_nottingham: {
+    name: 'Accelerate Places Nottingham',
+    address: 'The Poynt Bldg, 45 Wollaton St, Nottingham NG1 5FW',
+    links: {
+      web: 'https://accelerateplaces.com',
+      telephone: '0115 795 0141'
+    },
+    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2403.6379788316053!2d-1.1568977486961847!3d52.95493677980022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c180a490cd39%3A0xf65fd24c76f8ab27!2sAccelerate+Places!5e0!3m2!1sen!2suk!4v1487969450483'
+  }
 };
 
 const links = {
