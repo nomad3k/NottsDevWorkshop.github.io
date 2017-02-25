@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Markdown from 'react-markdown';
-import { Grid, Cell, Card, CardTitle, CardText } from 'react-mdl';
+import { Grid, Cell, Card, CardTitle, CardText, CardActions, Spacer, Button } from 'react-mdl';
 
 import { events, locations } from '../data';
 import SpeakerPanel from './speaker-panel';
 import LocationPanel from './location-panel';
 
-class Homepage extends React.Component {
+class EventPage extends React.Component {
   render() {
     const { date } = this.props.params;
     const event = events.filter(e => e.date == date)[0];
@@ -17,40 +16,42 @@ class Homepage extends React.Component {
         <Cell col={6} offsetDesktop={3}>
           <Card className='width--full' shadow={2}>
             <CardTitle>
-              <h4>{event.date} - {event.title}</h4>
+              <h4 className='mdl-color-text--primary'>{event.date} - {event.title}</h4>
             </CardTitle>
             <CardText>
               <div className='event__details'>
 
                 <div className='event__details-element'>
-                  <div className='fa fa-map-marker'></div>
-                  <div>{location.name}</div>
+                  <div className='fa fa-map-marker mdl-color-text--primary'></div>
+                  <div className='mdl-color-text--accent'>
+                    {location.name}
+                  </div>
                 </div>
 
                 <div className='event__details-element'>
-                  <div className='fa fa-microphone'></div>
-                  <div>
+                  <div className='fa fa-microphone mdl-color-text--accent'></div>
+                  <div className='mdl-color-text--primary'>
                     {event.speakers.map(s => s.name).join(' and ')}
                   </div>
                 </div>
 
                 <div className='event__details-element'>
-                  <div className='fa fa-calendar'></div>
-                  <div>
+                  <div className='fa fa-calendar mdl-color-text--primary'></div>
+                  <div className='mdl-color-text--accent'>
                     {event.date}
                   </div>
                 </div>
 
                 <div className='event__details-element'>
-                  <div className='fa fa-clock-o'></div>
-                  <div>
+                  <div className='fa fa-clock-o mdl-color-text--accent'></div>
+                  <div className='mdl-color-text--primary'>
                     {event.time}
                   </div>
                 </div>
 
               </div>
 
-              <h4>Description</h4>
+              <h4 className='mdl-color-text--primary'>Description</h4>
 
               <div className='event__summary justify'>
                 <Markdown source={event.summary} />
@@ -60,17 +61,25 @@ class Homepage extends React.Component {
                 <Markdown source={event.description} />
               </div>
 
-              <h4>What you will need</h4>
+              <h4 className='mdl-color-text--primary'>What you will need</h4>
 
               <div className='event__what-you-will-need justify'>
                 <Markdown source={event.what_you_will_need} />
               </div>
 
             </CardText>
+
+            {!event.attachment ? null : (
+              <CardActions border>
+                <Spacer />
+                <Button name='attachment' href={event.attachment} raised accent>Download Files</Button>
+              </CardActions>
+            )}
           </Card>
         </Cell>
+
         {event.speakers.map((s,ix) => (
-          <Cell col={6} offsetDesktop={3}>
+          <Cell key={ix} col={6} offsetDesktop={3}>
             <SpeakerPanel key={ix} speaker={s} />
           </Cell>
         ))}
@@ -85,4 +94,4 @@ class Homepage extends React.Component {
   }
 }
 
-export default Homepage;
+export default EventPage;

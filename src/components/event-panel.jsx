@@ -21,13 +21,14 @@ class EventPanel extends React.Component {
                 <div className='speaker__quote'>{s.quote}</div>
               </div>
             ))}
-            <h4>{event.date} - {event.title}</h4>
+            <h4 className='mdl-color-text--primary'>{event.date} - {event.title}</h4>
             <div className='event__summary justify'>
               <Markdown source={event.summary} />
             </div>
           </CardText>
           <CardActions border>
-            <Link to={`/${event.date}/${event.link}`} className='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent'>View</Link>
+            <Spacer />
+            <Link to={`/${event.date}/${event.link}`} className='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent'>View</Link>
           </CardActions>
         </Card>
       </div>

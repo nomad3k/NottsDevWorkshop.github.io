@@ -28,10 +28,6 @@ class Homepage extends React.Component {
           </Cell>
         ))}
 
-        <Cell col={6} offsetDesktop={3} offsetTablet={1} className='events__prior'>
-          <h3 className='sponsors__title'>Sponsors</h3>
-        </Cell>
-
         {sponsors.map((s,ix) => (
           <Cell key={ix} offsetDesktop={ix%2==0?3:0} col={3} phone={4}>
             <SponsorPanel sponsor={s} />

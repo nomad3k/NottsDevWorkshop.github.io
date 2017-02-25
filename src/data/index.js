@@ -5,6 +5,7 @@ const events = [
     title: 'An Introduction to PowerShell',
     link: 'an_introduction_to_powershell',
     location: 'accelerate_places_nottingham',
+    attachment: './attachments.zip',
     summary: `
 This workshop will introduce PowerShell to IT professionals and will cover the basic information required to be able to start writing PowerShell Scripts, Functions and Modules using PowerShell ISE and VS Code.
     `,

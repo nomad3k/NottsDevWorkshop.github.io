@@ -1,6 +1,6 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import { Card, CardTitle, CardText, CardActions } from 'react-mdl';
+import { Card, CardTitle, CardText, CardActions, Spacer } from 'react-mdl';
 
 import { links } from '../data';
 import LinkPanel from './link-panel';
@@ -11,7 +11,7 @@ class SpeakerPanel extends React.Component {
     return (
       <Card className='speaker width--full' shadow={2}>
         <CardTitle>
-          <div className='speaker__name'>
+          <div className='speaker__name mdl-color-text--primary'>
             <h4>{speaker.name}</h4>
           </div>
         </CardTitle>
@@ -30,12 +30,12 @@ class SpeakerPanel extends React.Component {
             </div>
           )}
         </CardText>
-        <CardActions border>
-          <div className='speaker__links'>
-            {Object.getOwnPropertyNames(speaker.links).map((p, ix) => (
-              <LinkPanel key={ix} link={links[p]} value={speaker.links[p]} />
-            ))}
-          </div>
+        <CardActions border className='speaker__links'>
+          <span className='marker mdl-color-text--accent'>[Speaker]</span>
+          <div className="mdl-layout-spacer"></div>
+          {Object.getOwnPropertyNames(speaker.links).map((p, ix) => (
+            <LinkPanel key={ix} link={links[p]} value={speaker.links[p]} />
+          ))}
         </CardActions>
       </Card>
     );

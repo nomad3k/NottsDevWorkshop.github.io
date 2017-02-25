@@ -2,7 +2,7 @@ import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import 'react-mdl/extra/material.css';
+import 'react-mdl/extra/css/material.green-red.min.css';
 import 'react-mdl/extra/material.js';
 
 import App from './components/app';

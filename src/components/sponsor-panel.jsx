@@ -2,14 +2,14 @@ import React from 'react';
 
 import { links } from '../data';
 import LinkPanel from './link-panel';
-import { Card, CardTitle, CardText, CardActions } from 'react-mdl';
+import { Card, CardTitle, CardText, CardActions, Spacer } from 'react-mdl';
 
 class SponsorPanel extends React.Component {
   render() {
     const { sponsor } = this.props;
     return (
       <Card className='sponsor width--full' shadow={2}>
-        <CardTitle className='sponsor__name'>
+        <CardTitle className='sponsor__name mdl-color-text--primary'>
           <h4>{sponsor.name}</h4>
         </CardTitle>
         <CardText>
@@ -17,12 +17,12 @@ class SponsorPanel extends React.Component {
             <img src={sponsor.logo} className='sponsor__logo-img' />
           </div>
         </CardText>
-        <CardActions border>
-          <div className='sponsor__links'>
-            {Object.getOwnPropertyNames(sponsor.links).map((p,ix) => (
-              <LinkPanel key={ix} link={links[p]} value={sponsor.links[p]} />
-            ))}
-          </div>
+        <CardActions border className='sponsor__links'>
+          <span className='marker mdl-color-text--primary'>[Sponsor]</span>
+          <Spacer/>
+          {Object.getOwnPropertyNames(sponsor.links).map((p,ix) => (
+            <LinkPanel key={ix} link={links[p]} value={sponsor.links[p]} />
+          ))}
         </CardActions>
       </Card>
     );

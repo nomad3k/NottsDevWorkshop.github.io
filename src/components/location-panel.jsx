@@ -8,12 +8,14 @@ class LocationPanel extends React.Component {
     return (
       <Card className='location width--full' shadow={2}>
         <CardTitle>
-          <h4>{location.name}</h4>
+          <h4 className='mdl-color-text--primary'>{location.name}</h4>
         </CardTitle>
         <CardText>
           <div className='location__address'>
             {location.address}
           </div>
+        </CardText>
+        <CardText>
           <div className='location__map'>
             <iframe src={location.map}
                     width='100%'

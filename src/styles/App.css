@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.mdl-card__actions {
+  display: flex;
+}
+
 .event__details {
 
 }
@@ -30,6 +34,9 @@
   background-size: cover;
 }
 
+.marker {
+  padding: 12px;
+}
 .sponsor__logo {
   text-align: center;
 }
