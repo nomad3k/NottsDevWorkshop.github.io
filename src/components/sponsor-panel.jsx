@@ -18,7 +18,6 @@ class SponsorPanel extends React.Component {
           </div>
         </CardText>
         <CardActions border className='sponsor__links'>
-          <span className='marker mdl-color-text--primary'>[Sponsor]</span>
           <Spacer/>
           {Object.getOwnPropertyNames(sponsor.links).map((p,ix) => (
             <LinkPanel key={ix} link={links[p]} value={sponsor.links[p]} />
