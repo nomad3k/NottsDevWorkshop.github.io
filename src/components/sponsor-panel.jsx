@@ -2,24 +2,29 @@ import React from 'react';
 
 import { links } from '../data';
 import LinkPanel from './link-panel';
+import { Card, CardTitle, CardText, CardActions } from 'react-mdl';
 
 class SponsorPanel extends React.Component {
   render() {
     const { sponsor } = this.props;
     return (
-      <div className='sponsor'>
-        <h3 className='sponsor__name'>
-          {sponsor.name}
-        </h3>
-        <div className='sponsor__logo'>
-          <img src={sponsor.logo} className='sponsor__logo-img' />
-        </div>
-        <div className='sponsor__links'>
-          {Object.getOwnPropertyNames(sponsor.links).map((p,ix) => (
-            <LinkPanel key={ix} link={links[p]} value={sponsor.links[p]} />
-          ))}
-        </div>
-      </div>
+      <Card className='sponsor width--full' shadow={2}>
+        <CardTitle className='sponsor__name'>
+          <h4>{sponsor.name}</h4>
+        </CardTitle>
+        <CardText>
+          <div className='sponsor__logo'>
+            <img src={sponsor.logo} className='sponsor__logo-img' />
+          </div>
+        </CardText>
+        <CardActions border>
+          <div className='sponsor__links'>
+            {Object.getOwnPropertyNames(sponsor.links).map((p,ix) => (
+              <LinkPanel key={ix} link={links[p]} value={sponsor.links[p]} />
+            ))}
+          </div>
+        </CardActions>
+      </Card>
     );
   }
 }

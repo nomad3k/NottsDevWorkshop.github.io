@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Markdown from 'react-markdown';
+import { Grid, Cell, Card, CardTitle, CardText } from 'react-mdl';
 
 import { events, locations } from '../data';
 import SpeakerPanel from './speaker-panel';
@@ -12,51 +13,74 @@ class Homepage extends React.Component {
     const event = events.filter(e => e.date == date)[0];
     const location = locations[event.location];
     return (
-      <div>
-        <h2>Event Page</h2>
-        <Link to='/'>Events</Link>
-        <div className='event__details'>
-          <h3>Details</h3>
-          <div className='event__details-date'>
-            <i className='fa fa-map-marker'></i>
-            {location.name}
-            {location.address}
-          </div>
-          <div className='event__details-date'>
-            <i className='fa fa-microphone'></i>
-            {event.speakers.map(s => s.name).join(' and ')}
-          </div>
-          <div className='event__details-date'>
-            <i className='fa fa-calendar'></i>
-            {event.date}
-          </div>
-          <div className='event__details-time'>
-            <i className='fa fa-clock-o'></i>
-            {event.time}
-          </div>
-        </div>
-        <div className='event__summary'>
-          <h3>Summary</h3>
-          <Markdown source={event.summary} />
-        </div>
-        <div className='event__description'>
-          <h3>Description</h3>
-          <Markdown source={event.description} />
-        </div>
-        <div className='event_what-you-will-need'>
-          <h3>What you will need</h3>
-          <Markdown source={event.what_you_will_need} />
-        </div>
-        <div className='event__speakers'>
-          <h3>Speakers</h3>
-          {event.speakers.map((s,ix) => (
+      <Grid>
+        <Cell col={6} offsetDesktop={3}>
+          <Card className='width--full' shadow={2}>
+            <CardTitle>
+              <h4>{event.date} - {event.title}</h4>
+            </CardTitle>
+            <CardText>
+              <div className='event__details'>
+
+                <div className='event__details-element'>
+                  <div className='fa fa-map-marker'></div>
+                  <div>{location.name}</div>
+                </div>
+
+                <div className='event__details-element'>
+                  <div className='fa fa-microphone'></div>
+                  <div>
+                    {event.speakers.map(s => s.name).join(' and ')}
+                  </div>
+                </div>
+
+                <div className='event__details-element'>
+                  <div className='fa fa-calendar'></div>
+                  <div>
+                    {event.date}
+                  </div>
+                </div>
+
+                <div className='event__details-element'>
+                  <div className='fa fa-clock-o'></div>
+                  <div>
+                    {event.time}
+                  </div>
+                </div>
+
+              </div>
+
+              <h4>Description</h4>
+
+              <div className='event__summary justify'>
+                <Markdown source={event.summary} />
+              </div>
+
+              <div className='event__description justify'>
+                <Markdown source={event.description} />
+              </div>
+
+              <h4>What you will need</h4>
+
+              <div className='event__what-you-will-need justify'>
+                <Markdown source={event.what_you_will_need} />
+              </div>
+
+            </CardText>
+          </Card>
+        </Cell>
+        {event.speakers.map((s,ix) => (
+          <Cell col={6} offsetDesktop={3}>
             <SpeakerPanel key={ix} speaker={s} />
-          ))}
-        </div>
-        <div className='event__location'>
-          <LocationPanel location={location} />
-        </div>
-      </div>
+          </Cell>
+        ))}
+
+        <Cell col={6} offsetDesktop={3}>
+          <div className='event__location'>
+            <LocationPanel location={location} />
+          </div>
+        </Cell>
+      </Grid>
     );
   }
 }

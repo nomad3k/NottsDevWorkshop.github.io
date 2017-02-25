@@ -1,14 +1,38 @@
+.logo {
+  text-align: center;
+}
+
+.event__details {
+
+}
+.event__details-element {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  vertical-align: top;
+}
+.event__details-element .fa {
+  font-size: 40px;
+  margin-bottom: 4px;
+}
+
 .logo__img {
   height: 256px;
   width: auto;
 }
 
-.speaker__avatar-img {
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
+.width--full {
+  width: 100%;
 }
 
+.backdrop {
+  background-image: url('/images/background/nottingham-blur.jpg');
+  background-size: cover;
+}
+
+.sponsor__logo {
+  text-align: center;
+}
 .sponsor__logo-img {
   height: 50px;
   width: auto;
@@ -17,4 +41,51 @@
 .link {
   padding: 4px;
   font-size: 32px;
+}
+
+.justify {
+  text-align: justify;
+  hyphens: auto;
+}
+.speaker {
+  display: inline-block;
+}
+.speaker__name {
+  text-align: center;
+}
+.speaker__bio {
+}
+.speaker__headline {
+  float: right;
+  margin-left: 16px;
+}
+.speaker__avatar,
+.speaker__quote {
+  margin: 8px;
+}
+.speaker__avatar-img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+.speaker__quote {
+  max-width: 128px;
+  font-style: italic;
+}
+.speaker__quote::before,
+.speaker__quote::after {
+  content: '"'
+}
+
+.location__map {
+  width: 100%;
+  padding-bottom: 75%;
+  position: relative;
+}
+.location__map iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }

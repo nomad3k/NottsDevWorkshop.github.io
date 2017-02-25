@@ -2,6 +2,9 @@ import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import 'react-mdl/extra/material.css';
+import 'react-mdl/extra/material.js';
+
 import App from './components/app';
 import Homepage from './components/home-page';
 import EventPage from './components/event-page';
