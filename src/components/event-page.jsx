@@ -13,7 +13,7 @@ class EventPage extends React.Component {
     const location = locations[event.location];
     return (
       <Grid>
-        <Cell col={6} offsetDesktop={3}>
+        <Cell col={6} offsetDesktop={3} offsetTablet={1}>
           <Card className='width--full' shadow={2}>
             <CardTitle>
               <h4 className='mdl-color-text--primary'>{event.date} - {event.title}</h4>
@@ -79,12 +79,12 @@ class EventPage extends React.Component {
         </Cell>
 
         {event.speakers.map((s,ix) => (
-          <Cell key={ix} col={6} offsetDesktop={3}>
+          <Cell key={ix} col={6} offsetDesktop={3} offsetTablet={1}>
             <SpeakerPanel key={ix} speaker={s} />
           </Cell>
         ))}
 
-        <Cell col={6} offsetDesktop={3}>
+        <Cell col={6} offsetDesktop={3} offsetTablet={1}>
           <div className='event__location'>
             <LocationPanel location={location} />
           </div>

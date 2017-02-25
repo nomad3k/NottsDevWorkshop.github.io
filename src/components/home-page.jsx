@@ -29,7 +29,7 @@ class Homepage extends React.Component {
         ))}
 
         {sponsors.map((s,ix) => (
-          <Cell key={ix} offsetDesktop={ix%2==0?3:0} col={3} phone={4}>
+          <Cell key={ix} offsetTablet={ix%2==0?1:0} offsetDesktop={ix%2==0?3:0} col={3} phone={4}>
             <SponsorPanel sponsor={s} />
           </Cell>
         ))}

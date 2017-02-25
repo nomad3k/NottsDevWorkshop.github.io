@@ -23,9 +23,6 @@ class AppComponent extends React.Component {
         <Header title={title}>
           {this.renderNavigation()}
         </Header>
-        <Drawer title={title}>
-          {this.renderNavigation()}
-        </Drawer>
         <Content className='mdl-color--grey-100 backdrop'>
           <Grid>
             <Cell col={6} offsetDesktop={3} offsetTablet={1}>
